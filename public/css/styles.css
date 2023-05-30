@@ -1,0 +1,50 @@
+.clock {
+	border: 1px solid #000;
+	border-radius: 50%;
+	width: 500px;
+	height: 500px;
+	position: relative;
+	background: url(../images/face.jpg);
+	background-size: cover;
+}
+
+.hand {
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.hand-sec::before {
+	content: '';
+	position: absolute;
+	width: 3px;
+	top: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 100px;
+	background: #000;
+}
+.hand-min {
+	transform: rotate(90deg);
+}
+.hand-min::before {
+	content: '';
+	position: absolute;
+	width: 5px;
+	top: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 150px;
+	background: orangered;
+}
+.hand-hour::before {
+	content: '';
+	position: absolute;
+	width: 7px;
+	top: 150px;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 200px;
+	background: blue;
+}
